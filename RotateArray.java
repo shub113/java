@@ -1,14 +1,8 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-class RotateArray
-{
+class RotateArray {
 
     // Space -> O(n)
     // Time -> O(n)
-    // newPositions = (index + k) % arr.length 
+    // newPositions = (index + k) % arr.length
     public static int[] rotateToRight2(int[] arr, int k) {
         int[] rotatedArray = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
@@ -25,7 +19,7 @@ class RotateArray
     public static int[] rotateToRight1(int[] arr, int k) {
         int r = k % arr.length; // incase k > arr.length
 
-        //reverse array
+        // reverse array
         reverse(arr, 0, arr.length - 1);
 
         // rever 0 to index
@@ -54,20 +48,17 @@ class RotateArray
         return rotateToRight2(arr, newR);
     }
 
-
-
-    public static void main(String[] args) throws java.lang.Exception
-    {
+    public static void main(String[] args) throws java.lang.Exception {
         int[] ans = rotateToLeft(new int[] {
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7
         }, 3);
-        for (int i: ans) {
+        for (int i : ans) {
             System.out.println(i + ", ");
         }
 

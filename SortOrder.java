@@ -1,10 +1,5 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-// Example of dynymic array
-class SortOrder
-{
+class SortOrder {
 
     public static int[] sortOrders(int[] arr) {
         int i = 0;
@@ -27,21 +22,20 @@ class SortOrder
 
     }
 
-    public static void main(String[] args) throws java.lang.Exception
-    {
+    public static void main(String[] args) throws java.lang.Exception {
         int[] ans = sortOrders(new int[] {
-            2,
-            1,
-            0,
-            0,
-            1,
-            0,
-            1,
-            0,
-            0,
-            1
+                2,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                1
         });
-        for (int i: ans) {
+        for (int i : ans) {
             System.out.println(i);
         }
     }

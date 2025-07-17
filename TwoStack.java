@@ -1,10 +1,4 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
-
-class TwoStack
-{
+class TwoStack {
 
     int[] arr;
     int top1;
@@ -48,14 +42,13 @@ class TwoStack
 
     public String toString() {
         String str = new String();
-        for (int i: arr) {
+        for (int i : arr) {
             str = str + i + ", ";
         }
         return str;
     }
 
-    public static void main(String[] args) throws java.lang.Exception
-    {
+    public static void main(String[] args) throws java.lang.Exception {
         TwoStack ts = new TwoStack(9);
         ts.push1(3);
         ts.push1(5);
@@ -71,7 +64,6 @@ class TwoStack
         ts.pop2();
         ts.pop2();
         ts.pop2();
-
 
         System.out.println(ts);
 

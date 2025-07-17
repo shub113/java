@@ -1,6 +1,5 @@
 import java.util.*;
 
-// Example of dynymic array
 class TowSum {
     public int[] solutionSquareN(int[] arr, int target) {
 

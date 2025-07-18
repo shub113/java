@@ -1,12 +1,8 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
+class SortStackWithRecursion {
 
-class SortStackWithRecursion
-{
-
-    public static Stack < Integer > insertAtCorrectPosition(Stack < Integer > stack, int num) {
+    public static Stack<Integer> insertAtCorrectPosition(Stack<Integer> stack, int num) {
         if (stack.isEmpty() || num >= stack.peek()) {
             stack.push(num);
             return stack;
@@ -18,7 +14,9 @@ class SortStackWithRecursion
         return stack;
     }
 
-    public static Stack < Integer > sort(Stack < Integer > stack) {
+    // Time -> O(n^2) since each sort calls insertAtCorrectPosition which takes O(n)
+    // Space -> O(n) for the recursion stack
+    public static Stack<Integer> sort(Stack<Integer> stack) {
         if (stack.isEmpty()) {
             return stack;
         }
@@ -28,9 +26,8 @@ class SortStackWithRecursion
         return stack;
     }
 
-    public static void main(String[] args) throws java.lang.Exception
-    {
-        Stack < Integer > stack = new Stack < > ();
+    public static void main(String[] args) throws java.lang.Exception {
+        Stack<Integer> stack = new Stack<>();
         stack.push(5);
         stack.push(7);
         stack.push(1);

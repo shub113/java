@@ -1,11 +1,7 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+class DoublyEndedQueue {
 
-
-class DoublyEndedQueue
-{
-
+    // Time -> O(n)
+    // Space -> O(n) for storing data
     private static class Node {
 
         int data;
@@ -20,7 +16,6 @@ class DoublyEndedQueue
     Node front;
     Node rear;
     int size;
-
 
     public void pushToFront(int value) {
         Node node = new Node(value);
@@ -77,6 +72,8 @@ class DoublyEndedQueue
         return this.size;
     }
 
+    // Time -> O(n)
+    // Space -> O(1) since we are not using any extra space
     public String toString() {
         String str = new String();
         Node node = front;
@@ -88,9 +85,7 @@ class DoublyEndedQueue
         return str;
     }
 
-
-    public static void main(String[] args) throws java.lang.Exception
-    {
+    public static void main(String[] args) throws java.lang.Exception {
         DoublyEndedQueue dq = new DoublyEndedQueue();
         dq.pushToFront(3);
         dq.pushToFront(2);

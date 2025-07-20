@@ -1,17 +1,14 @@
 import java.util.*;
-import java.lang.*;
-import java.io.*;
 
-
-class ReverseQueueViaRecursion
-{
-
-    public static void reverse(Queue < Integer > queue) {
+class ReverseQueueViaRecursion {
+    // Time -> O(n) each element is qued once and dequeued once
+    // Space -> O(n) for the recursion stack
+    public static void reverse(Queue<Integer> queue) {
         if (queue.isEmpty()) {
             return;
         }
 
-        // remove from rear 
+        // remove from rear
         int element = queue.poll();
 
         // reverse remaining queue
@@ -21,10 +18,8 @@ class ReverseQueueViaRecursion
         queue.offer(element);
     }
 
-
-    public static void main(String[] args) throws java.lang.Exception
-    {
-        Queue < Integer > queue = new LinkedList < > ();
+    public static void main(String[] args) throws java.lang.Exception {
+        Queue<Integer> queue = new LinkedList<>();
 
         queue.offer(1);
         queue.offer(2);
@@ -37,7 +32,6 @@ class ReverseQueueViaRecursion
         reverse(queue);
 
         System.out.println("Reversed - " + queue);
-
 
     }
 }

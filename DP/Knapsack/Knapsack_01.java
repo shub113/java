@@ -28,7 +28,6 @@ class Knapsack_01 {
     }
 
     private static List<Integer> getSelectedItems(int[][] matrix, int capacity, int[] weights) {
-        StringBuilder sb = new StringBuilder();
         List<Integer> list = new ArrayList<>();
         int cap = capacity;
 

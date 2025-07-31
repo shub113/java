@@ -1,5 +1,6 @@
+package DP.Knapsack;
+
 import java.util.*;
-import java.io.*;
 
 // Time Complexity: O(nW)
 // Space Complexity: O(nW)

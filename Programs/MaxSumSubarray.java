@@ -1,22 +1,18 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
 // Given an array of integers (positive and/or negative),
 // find the maximum sum of any contiguous subarray
 
 //Kadane's Algorithm is an efficient O(n) solution to find the maximum sum subarray in a given array of numbers (including negative numbers).
 //It works by dynamically tracking the best possible subarray sum ending at each position in the array.
 
-class MaximumSumSubarray
-{
+class MaximumSumSubarray {
 
     // LOGIC FOR KADANE's ALGO
-    //If adding the current number improves current_max, we extend the subarray.
+    // If adding the current number improves current_max, we extend the subarray.
 
-    //If the current number itself is better than the extended subarray, we start fresh from this number.
+    // If the current number itself is better than the extended subarray, we start
+    // fresh from this number.
 
-    //This ensures we always consider the optimal subarray up to the current index.
+    // This ensures we always consider the optimal subarray up to the current index.
     // Time -> O(n)
     // Space -> O(1)
     private static void maxSum1_kadane(int[] arr) {
@@ -43,7 +39,8 @@ class MaximumSumSubarray
                 end = i;
             }
         }
-        System.out.println("start - " + start + ", end - " + end + ", total - " + globalMax + ", currentMax - " + currentMax);
+        System.out.println(
+                "start - " + start + ", end - " + end + ", total - " + globalMax + ", currentMax - " + currentMax);
     }
 
     // Time -> O(n^2)
@@ -68,19 +65,19 @@ class MaximumSumSubarray
 
         System.out.println("start - " + start + ", end - " + end + ", total - " + max_global);
     }
-    public static void main(String[] args) throws java.lang.Exception
-    {
+
+    public static void main(String[] args) throws java.lang.Exception {
         // your code goes here
         maxSum2(new int[] {
-            -2, 1, -3, 4, -1, 2, 1, -5, 4
+                -2, 1, -3, 4, -1, 2, 1, -5, 4
         });
 
         maxSum1_kadane(new int[] {
-            110,
-            -10,
-            95,
-            2,
-            -1000
+                110,
+                -10,
+                95,
+                2,
+                -1000
         });
     }
 }

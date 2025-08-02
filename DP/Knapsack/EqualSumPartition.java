@@ -1,14 +1,13 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
+package DP.Knapsack;
 
-class EqualSumPartition
-{
+import java.util.*;
+
+class EqualSumPartition {
     // Time -> O(size * sum)
     // Space -> O(size * sum)
     private static void partition(int[] num) {
         int total = 0;
-        for (int i: num) {
+        for (int i : num) {
             total += i;
         }
 
@@ -36,15 +35,15 @@ class EqualSumPartition
         }
 
         StringBuilder sb = new StringBuilder();
-        for (boolean[] row: dp) {
-            for (boolean value: row) {
+        for (boolean[] row : dp) {
+            for (boolean value : row) {
                 sb.append(value).append(", ");
             }
             sb.append("\n");
         }
         System.out.println(sb);
 
-        List < Integer > list = new ArrayList < > ();
+        List<Integer> list = new ArrayList<>();
         // backtracking for indices
         int i = size;
         int j = sum;
@@ -58,13 +57,12 @@ class EqualSumPartition
         System.out.println("Indices - " + list);
     }
 
-    public static void main(String[] args) throws java.lang.Exception
-    {
+    public static void main(String[] args) throws java.lang.Exception {
         partition(new int[] {
-            1,
-            5,
-            11,
-            5
+                1,
+                5,
+                11,
+                5
         });
     }
 }

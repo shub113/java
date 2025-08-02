@@ -1,6 +1,3 @@
-import java.util.*;
-import java.io.*;
-
 class LCSubstring {
     // Time -> O(n*m)
     // Space -> O(n*m)

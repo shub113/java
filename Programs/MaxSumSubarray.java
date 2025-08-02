@@ -49,7 +49,6 @@ class MaximumSumSubarray {
         int start = 0;
         int end = 0;
         int max_global = arr[0];
-        int[] ans = new int[3];
 
         for (int i = 0; i < arr.length - 1; i++) {
             int currentSum = arr[i];

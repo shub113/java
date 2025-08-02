@@ -20,8 +20,10 @@ class LCSubstring {
             for (int j = 1; j <= m; j++) {
                 if (str1.charAt(i - 1) == str2.charAt(j - 1)) {
                     dp[i][j] = dp[i - 1][j - 1] + 1;
-                    maxLength++;
-                    end = i - 1;
+                    if (dp[i][j] > maxLength) {
+                        maxLength = dp[i][j];
+                        end = i - 1;
+                    }
                 } else {
                     dp[i][j] = 0;
                 }
@@ -33,7 +35,7 @@ class LCSubstring {
     }
 
     public static void main(String[] args) throws java.lang.Exception {
-        String ans = LCS("ajklmq", "bjklmc");
+        String ans = LCS("ajklmqpoiuytrewq", "bjklmcpoiuytrewq");
         System.out.println(ans);
 
     }

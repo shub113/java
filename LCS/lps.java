@@ -1,15 +1,9 @@
-import java.util.*;
-import java.lang.*;
-import java.io.*;
-
 //Given a sequence, find the length of the longest palindromic subsequence in it.
 
 // ANSWER -> The LCS between a string and its reverse will be the longest sequence that appears in the same order in both the original and reversed string. 
 // SOLUTION -> reverse string and find LCS
 
-
-class LongestPanlindromicSubsequence
-{
+class LongestPanlindromicSubsequence {
 
     private static String lps(String str1) {
         if (str1 == null || str1.isEmpty()) {
@@ -36,8 +30,8 @@ class LongestPanlindromicSubsequence
         }
 
         StringBuilder sb = new StringBuilder();
-        for (int[] row: dp) {
-            for (int value: row) {
+        for (int[] row : dp) {
+            for (int value : row) {
                 sb.append(value).append(", ");
             }
             sb.append("\n");
@@ -60,9 +54,7 @@ class LongestPanlindromicSubsequence
         return ans.reverse().toString();
     }
 
-    public static void main(String[] args) throws java.lang.Exception
-    {
-
+    public static void main(String[] args) throws java.lang.Exception {
 
         String ans = lps("bbbab");
         System.out.println(ans);

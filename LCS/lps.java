@@ -9,13 +9,8 @@ class LongestPanlindromicSubsequence {
         if (str1 == null || str1.isEmpty()) {
             return "";
         }
-        StringBuilder str2 = new StringBuilder();
+        String str2 = new StringBuilder(str1).reverse().toString();
         int m = str1.length();
-
-        for (int i = m - 1; i >= 0; i--) {
-            str2.append(str1.charAt(i));
-        }
-
         int n = str2.length();
         int[][] dp = new int[m + 1][n + 1];
 
